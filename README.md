@@ -198,10 +198,12 @@ We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md)
 
 - **Special thanks to the following projects and contributors for their support and resources:**
 
-- [Anilist-API](https://github.com/AniList/ApiV2-GraphQL-Docs) by [AniList](https://anilist.co/)
+- [Anilist-ApiV2](https://github.com/AniList/ApiV2-GraphQL-Docs) by [AniList](https://anilist.co/)
+- [jikan-rest](https://github.com/jikan-me/jikan-rest) by [Jikan](https://github.com/jikan-me/)
 - [consumet.ts](https://github.com/consumet/consumet.ts) by [consumet](https://github.com/consumet)
 - [mal-backup](https://github.com/bal-mackup/mal-backup) by [bal-mackup](https://github.com/bal-mackup)
-- [anime-lists](https://github.com/animesage-online/anime-lists) by [animesage-online](https://github.com/animesage-online)
+- [anime-lists](https://github.com/Fribb/anime-lists) by [Fribb](https://github.com/Fribb)
+- [gogoanime-I](https://anitaku.bz/) & [gogoanime-II](https://gogoanime3.cc/)
 - [amvstrm](https://github.com/amvstrm/) for the inspiration and ideas on how to structure the project.
 
 ## 📜 License

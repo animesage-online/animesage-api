@@ -34,7 +34,7 @@ build/Release
 .yarn-integrity
 .cache
 .lock-wscript
-package_lock.json
+package-lock.json
 
 # Output directories
 .next

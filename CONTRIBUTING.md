@@ -54,11 +54,13 @@ When committing changes, use the following format:
   - `fix`: Fixing a bug or issue
   - `optimize`: Improving performance or efficiency
   - `refactor`: Refactoring a specific section of the codebase
+  - `docs`: Documentation changes
 
 - **Examples:**
   - `feat: New anime search feature`
   - `fix: Resolve issue with anime title search`
   - `optimize: Improve response time for trending anime`
   - `refactor: Refactor anime details retrieval`
+  - `docs: Update contributing guide`
 
 Thank you for contributing to the Animesage API!
