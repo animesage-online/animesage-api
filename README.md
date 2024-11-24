@@ -54,6 +54,12 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   | ---------- | ------ | --------- | -------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------- |
   | `provider` | string | `anilist` | No       | `anilist` `mal` `gogo` `zoro` `pahe` `notifymoe` `kitsu` `anidb` `livechart` `anisearch` `animeplanet` | Specifies the provider of the anime ID. |
 
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/v1/anime/1/info?provider=anilist"
+  ```
+
 ### 2. 📺 Get All Episodes Info of a Specific Anime
 
 - **Endpoint:** `GET /v1/anime/:animeId/episodes`
@@ -69,6 +75,12 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   | Parameter  | Type   | Default   | Required | Options                                                                                                | Description                             |
   | ---------- | ------ | --------- | -------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------- |
   | `provider` | string | `anilist` | No       | `anilist` `mal` `gogo` `zoro` `pahe` `notifymoe` `kitsu` `anidb` `livechart` `anisearch` `animeplanet` | Specifies the provider of the anime ID. |
+
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/v1/anime/1/episodes?provider=anilist"
+  ```
 
 ### 3. 📄 Get All Anime Information by Page
 
@@ -88,6 +100,12 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   | `year`    | integer |         | No       | Filter by release year.                     |
   | `season`  | string  |         | No       | Options: `winter` `spring` `summer` `fall`  |
 
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/v1/anime/info/page/1?limit=50"
+  ```
+
 ### 4. 🔍 Search for an Anime by Title
 
 - **Endpoint:** `GET /v1/anime/search-by-title/:title`
@@ -105,6 +123,12 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   | `page`    | integer | `1`     | No       | The page number to retrieve.                |
   | `limit`   | integer | `20`    | No       | Number of results per page. Min: 1, Max: 50 |
 
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/v1/anime/search-by-title/reincarnated+as+slime?page=1&limit=50"
+  ```
+
 ### 5. 🔥 Get Trending Anime
 
 - **Endpoint:** `GET /v1/anime/trending`
@@ -116,6 +140,12 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   | `page`    | integer | `1`     | No       | The page number to retrieve.                |
   | `limit`   | integer | `20`    | No       | Number of results per page. Min: 1, Max: 50 |
 
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/v1/anime/trending?page=1&limit=50"
+  ```
+
 ### 6. 🌟 Get Popular Anime
 
 - **Endpoint:** `GET /v1/anime/popular`
@@ -126,6 +156,12 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   | --------- | ------- | ------- | -------- | ------------------------------------------- |
   | `page`    | integer | `1`     | No       | The page number to retrieve.                |
   | `limit`   | integer | `20`    | No       | Number of results per page. Min: 1, Max: 50 |
+
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/v1/anime/popular?page=1&limit=50"
+  ```
 
 ### 7. 🎬 Get Stream Links for a Specific Anime Episode
 
@@ -145,10 +181,22 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   | `type`     | string | `sub`     | No       | `sub` `dub`            | Specifies the type of the anime.        |
   | `provider` | string | `anilist` | No       | `anilist` `mal` `gogo` | Specifies the provider of the anime ID. |
 
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/v1/anime/1/stream/1?type=sub&provider=anilist"
+  ```
+
 ### 8. 🎲 Get a Random Anime
 
 - **Endpoint:** `GET /v1/anime/random`
 - **Description:** Fetch a random anime title.
+
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/v1/anime/random"
+  ```
 
 ### 9. 📅 Get All Latest Airing Anime
 
@@ -160,6 +208,12 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   | --------- | ------- | ------- | -------- | ------------------------------------------- |
   | `page`    | integer | `1`     | No       | The page number to retrieve.                |
   | `limit`   | integer | `20`    | No       | Number of results per page. Min: 1, Max: 50 |
+
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/v1/anime/latest-anime?page=1&limit=50"
+  ```
 
 ## 🚦 Rate Limits (v1)
 
