@@ -1,31 +1,35 @@
 # 🌟 Animesage API
 
 [![Version](https://img.shields.io/badge/version-1.2.0-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![npm](https://img.shields.io/badge/npm-10.9.0-red)](https://www.npmjs.com/)
+[![Node.js](https://img.shields.io/badge/node-v22.11.0-green)](https://nodejs.org/)
+[![Express](https://img.shields.io/badge/Express-4.18.2-blue)](https://expressjs.com/)
 
 Welcome to the Animesage API documentation. This API provides various endpoints to access anime-related data.
 
-## 📖 Explore the API
+## 📖 Table of Contents
 
-- **[Base URL](#-base-url)**
-- **Endpoints (v1) Overview:**
-  - **[🎥 Detailed Anime Info](#1--get-detailed-information-about-a-specific-anime)**
-  - **[📺 Episodes Info](#2--get-all-episodes-info-of-a-specific-anime)**
-  - **[📄 Anime by Page](#3--get-all-anime-information-by-page)**
-  - **[🔍 Search by Title](#4--search-for-an-anime-by-title)**
-  - **[🔥 Trending Anime](#5--get-trending-anime)**
-  - **[🌟 Popular Anime](#6--get-popular-anime)**
-  - **[🎬 Stream Links](#7--get-stream-links-for-a-specific-anime-episode)**
-  - **[🎲 Random Anime](#8--get-a-random-anime)**
-  - **[📅 Latest Airing Anime](#9--get-all-latest-airing-anime)**
-- **[🚦 Rate Limits (v1)](#-rate-limits-v1)**
-- **[📧 Contact for Higher Rate Limits](#-contact-for-higher-rate-limits)**
-- **[👤 Author](#-author)**
-- **[📖 Documentation](#-documentation)**
-- **[📋 Changelog](#-changelog)**
-- **[📜 Code of Conduct](#-code-of-conduct)**
-- **[🤝 Contributing](#-contributing)**
-- **[🙏 Thanks/Credits](#-thankscredits)**
-- **[📜 License](#-license)**
+- [🌐 Base URL](#-base-url)
+- [📚 Endpoints (v1)](#-endpoints-v1)
+  - [🎥 Detailed Anime Info](#1--get-detailed-information-about-a-specific-anime)
+  - [📺 Episodes Info](#2--get-all-episodes-info-of-a-specific-anime)
+  - [📄 Anime by Page](#3--get-all-anime-information-by-page)
+  - [🔍 Search by Title](#4--search-for-an-anime-by-title)
+  - [🔥 Trending Anime](#5--get-trending-anime)
+  - [🌟 Popular Anime](#6--get-popular-anime)
+  - [🎬 Stream Links](#7--get-stream-links-for-a-specific-anime-episode)
+  - [🎲 Random Anime](#8--get-a-random-anime)
+  - [📅 Latest Airing Anime](#9--get-all-latest-airing-anime)
+- [🚦 Rate Limits (v1)](#-rate-limits-v1)
+- [📧 Contact for Higher Rate Limits](#-contact-for-higher-rate-limits)
+- [👤 Author](#-author)
+- [📖 Documentation](#-documentation)
+- [📋 Changelog](#-changelog)
+- [📜 Code of Conduct](#-code-of-conduct)
+- [🤝 Contributing](#-contributing)
+- [🙏 Thanks/Credits](#-thankscredits)
+- [📜 License](#-license)
 
 ## 🌐 Base URL
 
@@ -166,7 +170,7 @@ To ensure fair usage and maintain performance, the Animesage API enforces the fo
 | ⏱️ Per Minute | 120 requests        | Maximum number of requests allowed per minute. |
 | ⏰ Per Second | 10 requests         | Maximum number of requests allowed per second. |
 
-> **Note:** Exceeding these limits will result in 1 minute timeout from accessing the API. Please ensure your application handles rate limit responses gracefully.
+> **Note:** Exceeding these limits will result in a 1-minute timeout from accessing the API. Please ensure your application handles rate limit responses gracefully.
 
 ## 📧 Contact for Higher Rate Limits
 
