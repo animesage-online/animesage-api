@@ -103,7 +103,7 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
 - **Example:**
 
   ```bash
-  curl -X GET "https://api.animesage.online/v1/anime/info/page/1?limit=50"
+  curl -X GET "https://api.animesage.online/v1/anime/info/page/1?limit=50&year=2023&season=winter"
   ```
 
 ### 4. 🔍 Search for an Anime by Title

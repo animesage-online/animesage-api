@@ -62,6 +62,7 @@ When committing changes, use the following format:
   - `optimize`: Improving performance or efficiency
   - `refactor`: Refactoring a specific section of the codebase
   - `docs`: Documentation changes
+  - `chore`: Other changes that don't fit into the other categories
 
 - **Examples:**
   - `feat: New anime search feature`
@@ -69,5 +70,6 @@ When committing changes, use the following format:
   - `optimize: Improve response time for trending anime`
   - `refactor: Refactor anime details retrieval`
   - `docs: Update contributing guide`
-
+  - `chore: Update dependencies`
+  
 Thank you for contributing to the Animesage API!
