@@ -1,6 +1,6 @@
 # 🌟 Animesage API
 
-![Version](https://img.shields.io/badge/version-1.2.0-blue) ![Status](https://img.shields.io/badge/status-active-brightgreen) ![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)
+[![Version](https://img.shields.io/badge/version-1.2.0-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
 
 Welcome to the Animesage API documentation. This API provides various endpoints to access anime-related data.
 
@@ -166,7 +166,7 @@ To ensure fair usage and maintain performance, the Animesage API enforces the fo
 | ⏱️ Per Minute | 120 requests        | Maximum number of requests allowed per minute. |
 | ⏰ Per Second | 10 requests         | Maximum number of requests allowed per second. |
 
-> **Note:** Exceeding these limits will result in a temporary block of you from accessing the API. Please ensure your application handles rate limit responses gracefully.
+> **Note:** Exceeding these limits will result in 1 minute timeout from accessing the API. Please ensure your application handles rate limit responses gracefully.
 
 ## 📧 Contact for Higher Rate Limits
 

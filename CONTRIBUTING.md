@@ -4,6 +4,7 @@ Thank you for considering contributing to the Animesage API! This guide will hel
 
 ## Table of Contents
 - [Prerequisites](#prerequisites)
+- [Requirements](#requirements)
 - [Cloning the Repository](#cloning-the-repository)
 - [Updating the Codebase](#updating-the-codebase)
 - [Commit Message Guidelines](#commit-message-guidelines)
@@ -16,6 +17,12 @@ To contribute to the Animesage API, you should be familiar with the following te
 - JavaScript
 - Axios
 - Cheerio
+
+## Requirements
+
+- Node.js v22.11.0+
+- npm v10.9.0+
+- MariaDB Server v10.5.24+
 
 ## Cloning the Repository
 
