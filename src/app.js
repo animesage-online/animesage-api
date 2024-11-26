@@ -77,6 +77,7 @@ app.get("/", (req, res) => {
   });
 });
 
+// Favicon
 app.use(favicon(path.join(__dirname, "../public/assets", "favicon.ico")));
 
 // API routes
