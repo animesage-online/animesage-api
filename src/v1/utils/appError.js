@@ -51,8 +51,21 @@ export class RouteError extends AppError {
   }
 }
 
+//Cron job specific errors
+export class CronJobError extends AppError {
+  constructor(message = "Cron job error occurred", code = 500) {
+    super(message, code, true);
+    this.name = "CronJobError";
+  }
+}
+
 //Common App errors
 export const AppErrorTypes = {
+  CRON: {
+    CRON_JOB_FAILED: (message = "Failed to execute cron job") =>
+      new CronJobError(message, 500),
+  },
+
   DATABASE: {
     CONNECTION_FAILED: (message = "Failed to create MySQL connection pool") =>
       new DatabaseError(message, 503),
@@ -91,8 +104,6 @@ export const AppErrorTypes = {
       message = "The resource you are looking for is not found, it may be available in the future"
     ) => new APIError(message, 404),
     MISSING_PARAMETERS: (message = "Missing required parameters") =>
-      new APIError(message, 400),
-    MISSING_QUERY_PARAMETERS: (message = "Missing required query parameters") =>
       new APIError(message, 400),
     SEEDING_TIMEOUT: (
       message = "Seeding timeout: Unable to start seeding process"

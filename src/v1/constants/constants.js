@@ -30,6 +30,7 @@ export const APP_CONFIG = {
   burstMax: parseInt(env.data.BURST_MAX, 10),
   blockWithCors: env.data.BLOCK_WITH_CORS === "true",
   allowedOrigins: env.data.ALLOWED_ORIGINS.split(","),
+  isUseCronJob: env.data.IS_USE_CRON_JOB === "true",
 };
 
 // APP constants

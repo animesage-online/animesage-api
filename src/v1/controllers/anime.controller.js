@@ -31,10 +31,16 @@ const handleStandardResponse = (res, data, note = null) =>
 
 export const getAnimeById = catchAsync(async (req, res) => {
   const { animeId } = req.params;
-  const { provider = DEFAULT_PROVIDER } = req.query;
+  const provider =
+    req.query.provider || req.params.provider || DEFAULT_PROVIDER;
+
+  const isDeprecatedMethod = Boolean(req.params.provider);
+  const note = isDeprecatedMethod
+    ? "This method is deprecated. Please use the new method with query parameter `provider`. Refer to the documentation for more details."
+    : null;
 
   const data = await animeService.getAnimeInfo(animeId, provider);
-  handleStandardResponse(res, data);
+  handleStandardResponse(res, data, note);
 });
 
 export const getEpisodesByAnimeId = catchAsync(async (req, res) => {

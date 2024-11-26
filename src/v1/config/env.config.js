@@ -30,6 +30,7 @@ export const envSchema = z.object({
   APP_ROOT_MESSAGE: z.optional(z.string()),
   APP_ROOT_NOTE: z.optional(z.string()),
   BURST_MAX: z.string().default("20"),
+  IS_USE_CRON_JOB: z.enum(["true", "false"]).default("false"),
 });
 
 export const env = envSchema.safeParse(process.env);

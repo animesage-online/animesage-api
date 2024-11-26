@@ -14,8 +14,13 @@ import {
 } from "./v1/constants/constants.js";
 import v1Routes from "./v1/routes/index.js";
 import { AppErrorTypes } from "./v1/utils/appError.js";
+import { fileURLToPath } from "url";
+import favicon from "serve-favicon";
+import path from "path";
+import { dirname } from "path";
 
 const app = express();
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // Basic middleware
 app.use(morgan("dev"));
@@ -60,6 +65,10 @@ app.get("/", (req, res) => {
       url: "https://github.com/animesage-online",
       email: APP_CONSTANTS.contactEmail,
     },
+    repository: {
+      type: "git",
+      url: "https://github.com/animesage-online/animesage-api",
+    },
     docs: APP_CONSTANTS.docsUrl,
     versions: APP_CONSTANTS.rootVersions,
     endpoints: {
@@ -68,7 +77,7 @@ app.get("/", (req, res) => {
   });
 });
 
-app.get("/favicon.ico", (req, res) => res.status(204).end());
+app.use(favicon(path.join(__dirname, "../public/assets", "favicon.ico")));
 
 // API routes
 app.use("/v1", v1Routes);

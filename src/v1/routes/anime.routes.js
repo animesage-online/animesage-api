@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
     statusCode: 200,
     message: "Available Anime Endpoints",
     endpoints:
-      "Please check out our github repo for the available endpoints. [Animesage-API](https://github.com/animesage-online/animesage-api)",
+      "Please refer to the documentation for the available endpoints. [Animesage-DOCS](https://docs.animesage.online/)",
   });
 });
 
@@ -22,5 +22,8 @@ router.get("/popular", animeController.getPopularAnime);
 router.get("/:animeId/stream/:episodeNumber", animeController.getStreamingLink);
 router.get("/random", animeController.getRandomAnime);
 router.get("/latest-anime", animeController.getLatestAiringAnime);
+
+// These routes will be deprecated soon
+router.get("/info/:provider/:animeId", animeController.getAnimeById);
 
 export default router;
