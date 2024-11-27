@@ -20,7 +20,8 @@ import path from "path";
 import { dirname } from "path";
 
 const app = express();
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Basic middleware
 app.use(morgan("dev"));
@@ -55,14 +56,17 @@ if (SENTRY_CONFIG.isEnabled) {
   app.use(Sentry.Handlers.tracingHandler());
 }
 
+// Favicon
+app.use(favicon(path.join(__dirname, "../public/assets", "favicon.ico")));
+
 // Root route
 app.get("/", (req, res) => {
   res.json({
     message: APP_CONSTANTS.rootMessage,
     ...(APP_CONSTANTS.rootNote && { note: APP_CONSTANTS.rootNote }),
-    author: {
-      name: "Animesage",
-      url: "https://github.com/animesage-online",
+    developer: {
+      name: "Sandipan",
+      url: "https://github.com/sandipansingh",
       email: APP_CONSTANTS.contactEmail,
     },
     repository: {
@@ -76,9 +80,6 @@ app.get("/", (req, res) => {
     },
   });
 });
-
-// Favicon
-app.use(favicon(path.join(__dirname, "../public/assets", "favicon.ico")));
 
 // API routes
 app.use("/v1", v1Routes);

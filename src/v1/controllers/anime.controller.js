@@ -36,7 +36,7 @@ export const getAnimeById = catchAsync(async (req, res) => {
 
   const isDeprecatedMethod = Boolean(req.params.provider);
   const note = isDeprecatedMethod
-    ? "This method is deprecated. Please use the new method with query parameter `provider`. Refer to the documentation for more details."
+    ? "This method will be deprecated soon. Please use the new method with query parameter `provider`. Refer to the documentation for more details."
     : null;
 
   const data = await animeService.getAnimeInfo(animeId, provider);

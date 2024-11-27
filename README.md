@@ -1,6 +1,6 @@
 # 🌟 Animesage API
 
-[![Version](https://img.shields.io/badge/version-1.2.0-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
+[![Version](https://img.shields.io/badge/version-1.2.1-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![npm](https://img.shields.io/badge/npm-10.9.0-red)](https://www.npmjs.com/)
 [![Node.js](https://img.shields.io/badge/node-v22.11.0-green)](https://nodejs.org/)
@@ -23,7 +23,7 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   - [📅 Latest Airing Anime](#9--get-all-latest-airing-anime)
 - [🚦 Rate Limits (v1)](#-rate-limits-v1)
 - [📧 Contact for Higher Rate Limits](#-contact-for-higher-rate-limits)
-- [👤 Author](#-author)
+- [👤 Developer](#-Developer)
 - [📖 Documentation](#-documentation)
 - [📋 Changelog](#-changelog)
 - [📜 Code of Conduct](#-code-of-conduct)
@@ -230,10 +230,10 @@ To ensure fair usage and maintain performance, the Animesage API enforces the fo
 
 If you are a developer creating an app, website, or project and require a higher rate limit, please feel free to contact me at [animesage@animesage.online](mailto:animesage@animesage.online) for further discussion.
 
-## 👤 Author
+## 👤 Developer
 
-- **Name:** Animesage-Online
-- **GitHub:** [Animesage-Online GitHub](https://github.com/animesage-online)
+- **Name:** Sandipan
+- **GitHub:** [Sandipan Singh GitHub](https://github.com/sandipansingh)
 - **Email:** [animesage@animesage.online](mailto:animesage@animesage.online)
 
 ## 📖 Documentation
