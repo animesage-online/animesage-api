@@ -199,9 +199,9 @@ class AnimeHelper {
     );
   }
 
-  async fetchRandomAnimeInfo() {
+  async fetchRandomAnimeInfo(isStreamable) {
     try {
-      const animeData = await animeDBHelper.getRandomAnimeData();
+      const animeData = await animeDBHelper.getRandomAnimeData(isStreamable);
       if (!animeData) {
         throw AppErrorTypes.API.RESOURCE_NOT_FOUND();
       }

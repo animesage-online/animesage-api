@@ -407,13 +407,22 @@ class AnimeDBHelper {
     }
   }
 
-  async getRandomAnimeData() {
+  async getRandomAnimeData(isStreamable) {
     if (!DB_CONFIG?.isEnabled) {
       return null;
     }
 
     try {
-      const data = await dbHelper.getRandom(this.tables.ANIME_DATA);
+      const condition = {};
+      if (isStreamable) {
+        condition.idGogo = "IS NOT NULL";
+      }
+
+      const data = await dbHelper.findOne(
+        this.tables.ANIME_DATA,
+        condition,
+        "RAND()"
+      );
 
       return this._parseJsonField(data, "animeData");
     } catch (error) {

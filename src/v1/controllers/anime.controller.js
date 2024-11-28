@@ -5,6 +5,7 @@ import {
   successResponse,
   paginatedSuccessResponse,
 } from "../utils/response.js";
+import { AppErrorTypes } from "../utils/appError.js";
 
 const DEFAULT_PAGE = 1;
 const DEFAULT_LIMIT = 20;
@@ -111,7 +112,11 @@ export const getStreamingLink = catchAsync(async (req, res) => {
 });
 
 export const getRandomAnime = catchAsync(async (req, res) => {
-  const data = await animeService.getRandomAnimeInfo();
+  const { streamable } = req.query;
+
+  const isStreamable = streamable?.toLowerCase() === "yes";
+
+  const data = await animeService.getRandomAnimeInfo(isStreamable);
 
   handleStandardResponse(res, data);
 });

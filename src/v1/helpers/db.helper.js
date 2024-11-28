@@ -33,9 +33,9 @@ class DatabaseHelper {
     }
   }
 
-  sanitizeValues(data) {
+  _sanitizeValues(data) {
     if (Array.isArray(data)) {
-      return data.map((row) => this.sanitizeValues(row));
+      return data.map((row) => this._sanitizeValues(row));
     }
 
     return Object.fromEntries(
@@ -46,8 +46,29 @@ class DatabaseHelper {
     );
   }
 
+  _prepareWhereAndValue(conditions = {}) {
+    const entries = Object.entries(conditions);
+    const where = entries
+      .map(([key, value]) => {
+        if (value === "IS NOT NULL") {
+          return `${key} IS NOT NULL`;
+        }
+        if (value === "IS NULL") {
+          return `${key} IS NULL`;
+        }
+        return `${key} = ?`;
+      })
+      .join(" AND ");
+
+    const values = entries
+      .filter(([_, value]) => value !== "IS NOT NULL" && value !== "IS NULL")
+      .map(([_, value]) => value);
+
+    return { where, values };
+  }
+
   async insert(table, data) {
-    const sanitizedData = this.sanitizeValues(data);
+    const sanitizedData = this._sanitizeValues(data);
     const keys = Object.keys(sanitizedData);
     const values = Object.values(sanitizedData);
     const placeholders = keys.map(() => "?").join(", ");
@@ -66,7 +87,7 @@ class DatabaseHelper {
       return null;
     }
 
-    const sanitizedData = this.sanitizeValues(data);
+    const sanitizedData = this._sanitizeValues(data);
     const keys = Object.keys(sanitizedData[0]);
 
     const rowPlaceholders = sanitizedData
@@ -91,34 +112,32 @@ class DatabaseHelper {
     );
   }
 
-  async findOne(table, conditions = {}) {
-    const entries = Object.entries(conditions);
-    const where = entries.map(([key]) => `${key} = ?`).join(" AND ");
-    const values = entries.map(([_, value]) => value);
+  async findOne(table, conditions = {}, orderBy = "") {
+    const { where, values } = this._prepareWhereAndValue(conditions);
 
-    const sql = `SELECT * FROM ${table} ${
-      where ? `WHERE ${where}` : ""
+    const sql = `SELECT * FROM ${table} ${where ? `WHERE ${where}` : ""} ${
+      orderBy ? `ORDER BY ${orderBy}` : ""
     } LIMIT 1`;
+
+    console.log("sql", sql);
 
     const results = await this.execute(sql, values, "DatabaseHelper.findOne");
 
     return results?.[0] || null;
   }
 
-  async find(table, conditions = {}) {
-    const entries = Object.entries(conditions);
-    const where = entries.map(([key]) => `${key} = ?`).join(" AND ");
-    const values = entries.map(([_, value]) => value);
+  async find(table, conditions = {}, orderBy = "") {
+    const { where, values } = this._prepareWhereAndValue(conditions);
 
-    const sql = `SELECT * FROM ${table} ${where ? `WHERE ${where}` : ""}`;
+    const sql = `SELECT * FROM ${table} ${where ? `WHERE ${where}` : ""} ${
+      orderBy ? `ORDER BY ${orderBy}` : ""
+    }`;
 
     return await this.execute(sql, values, "DatabaseHelper.find");
   }
 
   async getPaginatedData(table, conditions = {}, page, limit, orderBy = "") {
-    const entries = Object.entries(conditions);
-    const where = entries.map(([key]) => `${key} = ?`).join(" AND ");
-    const values = entries.map(([_, value]) => value);
+    const { where, values } = this._prepareWhereAndValue(conditions);
     const offset = (page - 1) * limit;
 
     const sql = `SELECT * FROM ${table} ${where ? `WHERE ${where}` : ""} ${
@@ -194,14 +213,6 @@ class DatabaseHelper {
   async truncateTable(table) {
     const sql = `TRUNCATE TABLE ${table}`;
     return await this.execute(sql, [], "DatabaseHelper.truncateTable");
-  }
-
-  async getRandom(table) {
-    const sql = `SELECT * FROM ${table} ORDER BY RAND() LIMIT 1`;
-
-    const result = await this.execute(sql, [], "DatabaseHelper.getRandom");
-
-    return result?.[0] || null;
   }
 
   async findDataByForeignKey(animeSyncTable, dataTable, condition = {}) {
