@@ -1,6 +1,6 @@
 # 🌟 Animesage API
 
-[![Version](https://img.shields.io/badge/version-1.2.2-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
+[![Version](https://img.shields.io/badge/version-1.3.0-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![npm](https://img.shields.io/badge/npm-10.9.0-red)](https://www.npmjs.com/)
 [![Node.js](https://img.shields.io/badge/node-v22.11.0-green)](https://nodejs.org/)
@@ -16,9 +16,6 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
 - [📧 Contact for Higher Rate Limits](#-contact-for-higher-rate-limits)
 - [👤 Developer](#-Developer)
 - [📖 Documentation](#-documentation)
-- [📋 Changelog](#-changelog)
-- [📜 Code of Conduct](#-code-of-conduct)
-- [🤝 Contributing](#-contributing)
 - [🙏 Thanks/Credits](#-thankscredits)
 - [📜 License](#-license)
 
@@ -235,18 +232,6 @@ If you are a developer creating an app, website, or project and require a higher
 ## 📖 Documentation
 
 For more detailed documentation, visit [Animesage API Docs](https://docs.animesage.online).
-
-## 📋 Changelog
-
-For a detailed list of changes, please refer to the [Changelog](./CHANGELOG.md).
-
-## 📜 Code of Conduct
-
-Please read our [Code of Conduct](./CODE_OF_CONDUCT.md) to understand the standards we expect from our community.
-
-## 🤝 Contributing
-
-We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for more details on how to get started.
 
 ## 🙏 Thanks/Credits
 
