@@ -167,11 +167,12 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   | Parameter  | Type   | Default   | Required | Options                                                                                                | Description                             |
   | ---------- | ------ | --------- | -------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------- |
   | `idProvider` | string | `animesage` | No       | `animesage` `anilist` `mal` `gogo` `zoro` `pahe` `notifymoe` `kitsu` `anidb` `livechart` `anisearch` `animeplanet` | Specifies the provider of the anime ID. |
+  | `type` | string | `sub-dub` | No       | `sub` `dub` `sub-dub` | Specifies the type of the episode. Choose `sub-dub` to get both sub and dub sources. Choose `sub` to get only sub sources and `dub` to get only dub sources. |
 
 - **Example:**
 
   ```bash
-  curl -X GET "https://api.animesage.online/api/public/v1/anime/1/stream/1?idProvider=anilist"
+  curl -X GET "https://api.animesage.online/api/public/v1/anime/1/stream/1?idProvider=anilist&type=sub"
   ```
 
 ### 8. 🎲 Get a Random Anime
