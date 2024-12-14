@@ -1,6 +1,6 @@
 # 🌟 Animesage API
 
-[![Version](https://img.shields.io/badge/version-1.3.0-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
+[![Version](https://img.shields.io/badge/version-1.3.1-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![npm](https://img.shields.io/badge/npm-10.9.0-red)](https://www.npmjs.com/)
 [![Node.js](https://img.shields.io/badge/node-v22.11.0-green)](https://nodejs.org/)
