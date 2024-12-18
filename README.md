@@ -1,6 +1,6 @@
 # 🌟 Animesage API
 
-[![Version](https://img.shields.io/badge/version-1.3.1-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
+[![Version](https://img.shields.io/badge/version-1.3.2-blue)](./package.json) [![Status](https://img.shields.io/badge/status-active-brightgreen)](./README.md) [![License](https://img.shields.io/badge/license-Custom%20BY--NC-lightgrey)](./LICENSE)
 [![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-yellow)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 [![npm](https://img.shields.io/badge/npm-10.9.0-red)](https://www.npmjs.com/)
 [![Node.js](https://img.shields.io/badge/node-v22.11.0-green)](https://nodejs.org/)
@@ -209,6 +209,31 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
   curl -X GET "https://api.animesage.online/api/public/v1/anime/latest-anime?page=1&limit=50"
   ```
 
+### 10. 🎬 Get Download Links for a Specific Anime Episode
+
+- **Endpoint:** `GET /v1/anime/:animeId/download/:episodeNumber`
+- **Description:** Obtain download links for a specific episode of an anime.
+- **Path Parameters:**
+
+  | Parameter       | Type           | Required | Description                          |
+  | --------------- | -------------- | -------- | ------------------------------------ |
+  | `animeId`       | integer/string | Yes      | The unique identifier for the anime. |
+  | `episodeNumber` | integer        | Yes      | The episode number.                  |
+
+- **Query Parameters:**
+
+  | Parameter  | Type   | Default   | Required | Options                                                                                                | Description                             |
+  | ---------- | ------ | --------- | -------- | ------------------------------------------------------------------------------------------------------ | --------------------------------------- |
+  | `idProvider` | string | `animesage` | No       | `animesage` `anilist` `mal` `gogo` `zoro` `pahe` `notifymoe` `kitsu` `anidb` `livechart` `anisearch` `animeplanet` | Specifies the provider of the anime ID. |
+  | `type` | string | `sub-dub` | No       | `sub` `dub` `sub-dub` | Specifies the type of the episode. Choose `sub-dub` to get both sub and dub sources. Choose `sub` to get only sub sources and `dub` to get only dub sources. |
+
+- **Example:**
+
+  ```bash
+  curl -X GET "https://api.animesage.online/api/public/v1/anime/171018/download/1?idProvider=anilist&type=sub"
+  ```
+
+
 ## 🚦 Rate Limits (v1)
 
 To ensure fair usage and maintain performance, the Animesage API enforces the following rate limits:
@@ -227,7 +252,7 @@ If you are a developer creating an app, website, or project and require a higher
 ## 👤 Developer
 
 - **Name:** Sandipan
-- **GitHub:** [Sandipan Singh GitHub](https://github.com/sandipansingh)
+- **GitHub:** [Sandipan Singh (GitHub)](https://github.com/sandipansingh)
 - **Email:** [animesage@animesage.online](mailto:animesage@animesage.online)
 
 ## 📖 Documentation
