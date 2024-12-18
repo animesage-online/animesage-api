@@ -17,6 +17,7 @@ Welcome to the Animesage API documentation. This API provides various endpoints 
 - [👤 Developer](#-Developer)
 - [📖 Documentation](#-documentation)
 - [🙏 Thanks/Credits](#-thankscredits)
+- [©️ DMCA](#dmca)
 - [📜 License](#-license)
 
 ## 🌐 Base URL
@@ -270,6 +271,10 @@ For more detailed documentation, visit [Animesage API Docs](https://docs.animesa
 - [anime-lists](https://github.com/Fribb/anime-lists) by [Fribb](https://github.com/Fribb)
 - [gogoanime-I](https://anitaku.bz/) & [gogoanime-II](https://gogoanime3.cc/)
 - [amvstrm](https://github.com/amvstrm/) for the inspiration and ideas on how to structure the project.
+
+## DMCA
+
+[DMCA](./DMCA.md)
 
 ## 📜 License
 
